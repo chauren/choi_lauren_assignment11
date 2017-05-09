@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 11 Part 2</title>
+    <link rel="stylesheet" href="/Part2/css/part-2-theme.css">
+    <link rel="stylesheet" href="/Part2/css/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <!-- HOME PAGE -->
+    <div data-role="page" id="home">
+        <header data-role="header">
+            <h1>Directory</h1>
+        </header>
+        <section data-role="content" id="search-page">
+            <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search employees" id="search-employees">
+            </ul>
+            <br>
+            <h2>Welcome to directory!</h2>
+            <p>Get started by typing a search for an employee in our directory</p>
+       </section>
+        <footer data-role="footer" data-position="fixed">
+            <h4>Copyright &copy; 2017</h4>
+        </footer>
+    </div>
+    <!-- END HOME PAGE -->
+    
+    <!-- EMPLOYEE DETAILS PAGE -->
+        <div data-role="page" id="employee-details">
+        <header data-role="header">
+            <a href="#home" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-back">Back</a>
+            <h1>Employee Details</h1>
+            <a href="#home" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-search">Search</a>
+        </header>
+        <section data-role="content" id="employee-data">
+            <section id="employee-card">
+            </section>
+            <ul data-role="listview" id="employee-info" data-inset="true">
+                <li><a href="#employee-details" id="manager"><h2>View Manager</h2><p id="view-manager"></p></a></li>
+                <li><a href="#direct-reports" id="click-reports"><h2>View Direct Reports</h2><p id="view-reports"></p></a></li>
+                <li><a id="auto-office"><h2>Call Office</h2><p id="call-office"></p></a></li>
+                <li><a href="#" id="auto-cell"><h2>Call Cell</h2><p id="call-cell"></p></a></li>
+                <li><a href="#"><h2>Email</h2><p id="email"></p></a></li>
+            </ul>
+       </section>
+        <footer data-role="footer" data-position="fixed">
+            <h4>Copyright &copy; 2017</h4>
+        </footer>
+    </div>
+    <!-- END EMPLOYEE DETAILS PAGE -->
+    
+    <!-- DIRECT REPORTS PAGE -->
+        <div data-role="page" id="direct-reports">
+        <header data-role="header">
+            <a href="#employee-details" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-back">Back</a>
+            <h1>Direct Reports</h1>
+            <a href="#home" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-search">Search</a>
+        </header>
+        <section data-role="content">
+            <ul data-role="listview" id="direct-reports-results">
+            </ul>
+        </section>
+        <footer data-role="footer" data-position="fixed">
+            <h4>Copyright &copy; 2017</h4>
+        </footer>
+    </div>
+    <!-- END DIRECT REPORTS PAGE -->
+    
+    <script src="js/script.js"></script>
+    <script src="js/employee-details.js"></script>
+    <script src="js/direct-reports.js"></script>
+    <script src="js/view-manager.js"></script>
+</body>
+</html>
